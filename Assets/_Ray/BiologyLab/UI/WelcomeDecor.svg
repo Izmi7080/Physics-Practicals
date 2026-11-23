@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900">
+ <defs>
+  <radialGradient id="paper"><stop stop-color="#fff3d7"/><stop offset="1" stop-color="#f5ddb0"/></radialGradient>
+ </defs>
+ <rect width="1600" height="900" fill="url(#paper)"/>
+ <path d="M0 0h304c-49 42-100 33-142 66-50 39-66 103-162 123z" fill="#8c9d68" opacity=".84"/>
+ <path d="M0 142c79-5 89-68 158-93 58-21 92-9 158-49h73C291 76 253 46 171 83 101 115 86 211 0 228z" fill="#cb6958"/>
+ <path d="M0 235c94-24 95-119 181-151 83-31 125-30 189-84" fill="none" stroke="#d9a56a" stroke-width="5" opacity=".45"/>
+ <path d="M1600 900h-351c52-55 145-80 235-93 48-7 73-21 116-49z" fill="#93a56b" opacity=".88"/>
+ <path d="M1600 780c-93 17-102 89-171 94-62 5-97-20-180 26h-65c84-67 153-49 210-66 79-24 90-114 206-120z" fill="#c96c59"/>
+ <path d="M1600 705c-118 12-128 93-211 113-69 17-132-4-206 82" fill="none" stroke="#d9a56a" stroke-width="5" opacity=".45"/>
+ <g fill="none" stroke="#bd9d70" stroke-width="5" opacity=".22" stroke-linecap="round">
+  <path d="M1420 134l41 25 5 46-42 25-43-27-1-45zM1466 205l42 25-2 46-43 23-42-25 3-44M1380 158l-33-26M1461 159l26-34M1423 230l-27 35"/>
+  <circle cx="1347" cy="132" r="7"/><circle cx="1487" cy="125" r="7"/><circle cx="1396" cy="265" r="7"/>
+ </g>
+</svg>

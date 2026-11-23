@@ -223,7 +223,8 @@ Same steps as Stage 3, one branch and one merge per practical, ideally with its 
 integration; Physics 8.1 (specific heat) is NOT part of it. Its code stays (Ohm's law uses its
 walking controls `LabWalkRig`/`LabWalkPad` and `Resources/Physics81Audio`); its scene and 11 assets
 used only by it (`F:/Integration/reports/sal_unused.txt`) are to be removed — pending Azzam's OK
-(the automatic removal was blocked by the safety check).
+(the automatic removal was blocked by the safety check). **Done:** removed with Azzam's OK
+(commit 053e107); `Physics81Audio/Snap.wav` (loaded by name by Ohm's law) added.
 
 **Stage 4b done (2026-11-24): Bareera** (branch `integrate/bareera`)
 - Her project is a copy of Azzam's old project plus her work: only HER 18 scripts were imported (35
@@ -244,6 +245,30 @@ used only by it (`F:/Integration/reports/sal_unused.txt`) are to be removed — 
 - Tested: card -> intro (16:9/20:9/4:3 fit) -> CuSO4 bench renders, input adapter runs without
   errors -> End -> app menu (time scale restored); Reflection real mirror surface created; 11 build
   scenes 0 missing / broken; no console errors.
+
+**Stage 4c done (2026-11-24): Rayyan** (branch `integrate/rayyan`)
+- Imported into `Assets/_Ray` (same structure): `BiologyLab` (scripts, UI Toolkit), scene
+  `Scenes/BiologyLab.unity` and only the assets it uses (44 files); 7 resolve to `_Shared`/host.
+- Frog anatomy over budget (~600k tris): Muscle/Skeleton/Haslet FBX replaced by decimated versions
+  (headless Blender, `F:/Integration/reports/frog_process.py`) with the original `.meta` (same GUIDs,
+  prefab links intact): anatomy 112.7k tris (whole frog prefab 142k incl. skin rig). The 16 frog
+  textures (TGA, 4096) replaced by PNGs: 2048 for colour/normal, 1024 for occlusion/smoothness, same GUIDs.
+- His Editor postprocessor `Editor/FrogAnatomyNames.cs` IS needed (it was first left out as a tool):
+  it renames the FBX parts from Chinese to English at import, and his runtime code finds parts by
+  those names (`Internal Organs/Urinary Bladder` ...). Without it the internal view threw a
+  NullReferenceException. Imported with the path changed to `Assets/_Ray/Models`.
+- New asmdef `VirtualLab.Ray` (namespace `BiologyLab`; refs Input System, VirtualLab.Azm).
+- Exits (marked `INTEGRATION`): `Scripts/Integration/TajarbagahLink.cs`; Quit buttons (`quit`,
+  `internal-quit`) -> app menu instead of `Application.Quit`; Android back: inner screen -> his welcome
+  screen, welcome -> app menu. AppBootstrap in the scene.
+- Menu: Biology "Frog anatomy (organs and organ systems)" (slot biology 2, learn mode only);
+  build scene 12: BiologyLab.
+- Tested: menu -> card -> welcome; guide -> internal; all 11 internal views (muscles, skeleton,
+  organs, labeling, systems, digestive, respiratory, circulatory, nervous, urogenital, study organs)
+  without errors; back -> welcome -> app menu; no console errors. Not yet seen: his UI Toolkit screens
+  at 20:9/4:3 (the capture tool does not draw UI Toolkit) - check by eye in the Game view / on a phone.
+- Known, from his repo: `Materials/Skeleton.mat` metallic map points to a texture that is not in his
+  repo either (renders without it).
 
 ## STOP GATE 4 (after each practical)
 

@@ -1,0 +1,151 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+<Style src="BiologyLab.uss"/>
+<ui:VisualElement name="app" class="app">
+ <ui:VisualElement name="safe" class="safe">
+  <ui:VisualElement name="welcome" class="welcome">
+   <ui:VisualElement class="welcome-decor" picking-mode="Ignore"/>
+   <ui:VisualElement class="welcome-margin-art welcome-dna" picking-mode="Ignore"/>
+   <ui:VisualElement class="welcome-margin-art welcome-leaves" picking-mode="Ignore"/>
+   <ui:VisualElement class="welcome-margin-art welcome-cell" picking-mode="Ignore"/>
+   <ui:VisualElement class="welcome-phone-art welcome-phone-microscope" picking-mode="Ignore"/>
+   <ui:VisualElement class="welcome-phone-art welcome-phone-flask" picking-mode="Ignore"/>
+   <ui:VisualElement class="welcome-top">
+    <ui:VisualElement class="welcome-kicker" picking-mode="Ignore">
+     <ui:VisualElement class="welcome-kicker-line"/>
+     <ui:Label text="PUNJAB BOARD  /  BIOLOGY PRACTICAL" class="welcome-kicker-text"/>
+     <ui:VisualElement class="welcome-kicker-line"/>
+    </ui:VisualElement>
+    <ui:Button name="quit" tooltip="Quit experiment" class="action welcome-quit">
+     <ui:VisualElement class="power-icon" picking-mode="Ignore"/>
+     <ui:Label text="Quit" picking-mode="Ignore"/>
+    </ui:Button>
+   </ui:VisualElement>
+   <ui:VisualElement class="welcome-hero">
+    <ui:VisualElement class="welcome-brand-row" picking-mode="Ignore">
+     <ui:VisualElement class="welcome-microscope"/>
+     <ui:VisualElement class="welcome-logo">
+      <ui:VisualElement class="brand"><ui:Label text="Bio" class="brand-word"/><ui:VisualElement class="heart"/><ui:Label text="logy" class="brand-word"/></ui:VisualElement>
+      <ui:VisualElement class="welcome-lab-row"><ui:VisualElement class="welcome-lab-line"/><ui:Label text="LAB" class="lab-word"/><ui:VisualElement class="welcome-lab-line"/></ui:VisualElement>
+     </ui:VisualElement>
+     <ui:VisualElement class="welcome-flask"/>
+    </ui:VisualElement>
+    <ui:Label text="Discover the science of life." class="welcome-subtitle"/>
+    <ui:Button name="start" text="Start exploring  →" class="action start"/>
+   </ui:VisualElement>
+   <ui:Label text="FROG ANATOMY  •  INTERACTIVE STUDY GUIDE" class="welcome-footer"/>
+  </ui:VisualElement>
+  <ui:VisualElement name="study" class="study hidden">
+   <ui:VisualElement class="topbar">
+    <ui:Button name="home" text="←  Home" class="quiet"/>
+    <ui:Label text="BIOLOGY LAB" class="top-brand"/>
+    <ui:Label text="FROG PRACTICAL" class="top-tag"/>
+   </ui:VisualElement>
+   <ui:VisualElement name="workspace" class="workspace">
+    <ui:ScrollView name="notebook" class="notebook" vertical-scroller-visibility="Auto" horizontal-scroller-visibility="Hidden">
+     <ui:VisualElement class="paper">
+      <ui:Label text="01  /  STUDY GUIDE" class="paper-kicker"/>
+      <ui:Label name="heading" text="Meet the frog." class="paper-heading"/>
+      <ui:Label name="guide" text="Identification of major organs and organ systems in a dissected frog (dissection by demonstrator / teacher)." class="guide"/>
+      <ui:Label text="Study" class="study-label"/>
+      <ui:VisualElement class="rule"/>
+      <ui:Button name="external" text="External Anatomy   →" class="action anatomy"/>
+      <ui:Button name="internal" text="Internal Anatomy   →" class="action anatomy secondary"/>
+      <ui:Label name="hint" text="Choose a view to explore the frog’s anatomy." class="hint"/>
+      <ui:Button name="back" text="←  Back to study guide" class="quiet paper-back hidden"/>
+     </ui:VisualElement>
+    </ui:ScrollView>
+    <ui:VisualElement name="specimen" class="specimen">
+     <ui:VisualElement class="specimen-top"><ui:Label text="LIVE SPECIMEN" class="eyebrow"/><ui:Label name="view-label" text="External view" class="view-label"/></ui:VisualElement>
+     <ui:Image name="frog-image" class="frog-image"/>
+     <ui:VisualElement class="specimen-bottom"><ui:Label text="FROG" class="specimen-title"/><ui:Label name="pose-label" text="Idle animation • Observe its natural posture" class="specimen-note"/></ui:VisualElement>
+    </ui:VisualElement>
+   </ui:VisualElement>
+  </ui:VisualElement>
+  <ui:VisualElement name="anatomy-screen" class="anatomy-screen hidden">
+   <ui:VisualElement class="anatomy-topbar">
+    <ui:Button name="anatomy-home" text="⌂  Home" class="anatomy-home action"/>
+    <ui:Label name="anatomy-title" text="External anatomy" class="anatomy-title"/>
+    <ui:VisualElement name="internal-top" class="internal-top hidden">
+     <ui:Button name="retry-exam" text="↻ Retry" tooltip="Restart labeling exam" class="action hidden"/>
+     <ui:Button name="organ-study-restart" text="↻ Restart" tooltip="Return to all organs" class="action hidden"/>
+     <ui:Button name="gender" text="♂ Male" tooltip="Switch male / female" class="action gender"/>
+     <ui:Button name="system-isolate" text="Isolate" class="action hidden"/>
+     <ui:Button name="internal-quit" tooltip="Quit experiment" class="action internal-quit"><ui:VisualElement class="power-icon" picking-mode="Ignore"/></ui:Button>
+    </ui:VisualElement>
+   </ui:VisualElement>
+   <ui:VisualElement name="diagram" class="diagram">
+    <ui:Image name="anatomy-image" class="anatomy-image"/>
+    <ui:VisualElement name="internal-ui" class="internal-ui hidden" picking-mode="Ignore">
+     <ui:Label name="organ-study-tip" text="Click on an organ to study it" class="organ-study-tip hidden" picking-mode="Ignore"/>
+     <ui:VisualElement name="organ-study-hand" class="organ-study-hand hidden" picking-mode="Ignore"/>
+     <ui:Button name="organ-index-toggle" text="Browse all organs" tooltip="Select an organ, including one hidden behind another" class="action organ-index-toggle hidden"/>
+     <ui:VisualElement name="organ-index-panel" class="organ-index-panel hidden">
+      <ui:Label text="Choose an organ" class="organ-index-heading"/>
+      <ui:ScrollView name="organ-index-list" class="organ-index-list" horizontal-scroller-visibility="Hidden" vertical-scroller-visibility="Auto"/>
+     </ui:VisualElement>
+     <ui:VisualElement name="organ-study-panel" class="organ-study-panel hidden" picking-mode="Ignore">
+      <ui:Label name="organ-study-name" text="Heart" class="organ-study-name" picking-mode="Ignore"/>
+      <ui:Label text="Located:" class="organ-study-heading" picking-mode="Ignore"/>
+      <ui:Label name="organ-study-location" text="" class="organ-study-copy" picking-mode="Ignore"/>
+      <ui:Label text="Function:" class="organ-study-heading" picking-mode="Ignore"/>
+      <ui:Label name="organ-study-function" text="" class="organ-study-copy" picking-mode="Ignore"/>
+     </ui:VisualElement>
+     <ui:VisualElement name="organ-study-tools" class="organ-study-tools hidden">
+      <ui:Button name="organ-study-isolate" text="Isolate" tooltip="Ghost the other organs" class="action"/>
+      <ui:Button name="organ-study-hide" text="Hide" tooltip="Hide this organ" class="action"/>
+      <ui:Button name="organ-study-unhide" text="Unhide" tooltip="Show this organ again" class="action"/>
+     </ui:VisualElement>
+     <ui:VisualElement name="systems-menu" class="systems-menu hidden">
+      <ui:Button name="system-digestive" text="Digestive" class="action"/>
+      <ui:Button name="system-respiratory" text="Respiratory" tooltip="Study respiratory anatomy" class="action"/>
+      <ui:Button name="system-circulatory" text="Circulatory" tooltip="Study heart and vessels" class="action"/>
+     </ui:VisualElement>
+     <ui:VisualElement name="systems-menu-right" class="systems-menu systems-right hidden">
+      <ui:Button name="system-nervous" text="Nervous" tooltip="Study brain and spinal cord" class="action"/>
+      <ui:Button name="system-urogenital" text="Urogenital" tooltip="Study male and female urogenital anatomy" class="action"/>
+     </ui:VisualElement>
+     <ui:VisualElement name="layer-menu" class="layer-menu">
+      <ui:Button name="layer-muscles" class="action layer-button"><ui:Label text="Muscles" class="layer-caption" picking-mode="Ignore"/><ui:VisualElement class="layer-icon muscle-icon" picking-mode="Ignore"/></ui:Button>
+      <ui:Button name="layer-skeleton" class="action layer-button"><ui:Label text="Skeleton" class="layer-caption" picking-mode="Ignore"/><ui:VisualElement class="layer-icon bone-icon" picking-mode="Ignore"/></ui:Button>
+      <ui:Button name="layer-organs" class="action layer-button"><ui:Label text="Organs" class="layer-caption" picking-mode="Ignore"/><ui:VisualElement class="layer-icon organ-icon" picking-mode="Ignore"/></ui:Button>
+      <ui:Button name="layer-labeling" class="action layer-button"><ui:Label text="Labeling" class="layer-caption" picking-mode="Ignore"/><ui:VisualElement class="layer-icon clipboard-icon" picking-mode="Ignore"/></ui:Button>
+     </ui:VisualElement>
+     <ui:VisualElement name="label-bank" class="label-bank hidden">
+      <ui:Label text="DRAG TO LABEL" class="bank-heading"/>
+      <ui:Label name="label-score" text="0 / 18 correct" class="label-score"/>
+      <ui:ScrollView name="organ-labels" class="organ-labels" horizontal-scroller-visibility="Hidden" vertical-scroller-visibility="Auto"/>
+      <ui:Button name="reset-labels" text="↻ Reset labels" class="quiet"/>
+     </ui:VisualElement>
+     <ui:Label name="internal-note" text="Muscles • Male" class="internal-note"/>
+     <ui:VisualElement name="camera-controls" class="camera-controls">
+      <ui:VisualElement class="camera-pad zoom-pad">
+       <ui:Button name="zoom-in" text="+" tooltip="Zoom in" class="pad-button pad-top"/>
+       <ui:Button name="rotate-left" text="↶" tooltip="Rotate left" class="pad-button pad-left"/>
+       <ui:Button name="camera-reset" text="↻" tooltip="Reset camera" class="pad-button pad-center"/>
+       <ui:Button name="rotate-right" text="↷" tooltip="Rotate right" class="pad-button pad-right"/>
+       <ui:Button name="zoom-out" text="−" tooltip="Zoom out" class="pad-button pad-bottom"/>
+      </ui:VisualElement>
+      <ui:VisualElement class="camera-pad move-pad">
+       <ui:Button name="camera-up" tooltip="Move up / rotate organs up" class="pad-button pad-top"><ui:VisualElement class="direction-icon arrow-up" picking-mode="Ignore"/></ui:Button>
+       <ui:Button name="camera-left" tooltip="Move left / rotate organs left" class="pad-button pad-left"><ui:VisualElement class="direction-icon arrow-left" picking-mode="Ignore"/></ui:Button>
+       <ui:Button name="camera-center" text="↻" tooltip="Reset camera" class="pad-button pad-center"/>
+       <ui:Button name="camera-right" tooltip="Move right / rotate organs right" class="pad-button pad-right"><ui:VisualElement class="direction-icon arrow-right" picking-mode="Ignore"/></ui:Button>
+       <ui:Button name="camera-down" tooltip="Move down / rotate organs down" class="pad-button pad-bottom"><ui:VisualElement class="direction-icon arrow-down" picking-mode="Ignore"/></ui:Button>
+      </ui:VisualElement>
+     </ui:VisualElement>
+     <ui:VisualElement name="study-actions" class="study-actions">
+      <ui:Button name="study-organs" text="Study Organs  →" tooltip="Select and inspect individual organs" class="action"/>
+      <ui:Button name="study-systems" text="Study Systems  →" tooltip="Explore organ systems" class="action"/>
+     </ui:VisualElement>
+    </ui:VisualElement>
+   </ui:VisualElement>
+  </ui:VisualElement>
+ </ui:VisualElement>
+ <ui:VisualElement name="transition" class="transition hidden">
+  <ui:Label text="BIOLOGY LAB" class="transition-kicker"/>
+  <ui:Label name="transition-label" text="External anatomy" class="transition-label"/>
+  <ui:Label text="Preparing your specimen…" class="transition-note"/>
+  <ui:VisualElement class="transition-track"><ui:VisualElement name="transition-progress" class="transition-progress"/></ui:VisualElement>
+ </ui:VisualElement>
+</ui:VisualElement>
+</ui:UXML>

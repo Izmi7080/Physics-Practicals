@@ -1,0 +1,17 @@
+{
+    "name": "VirtualLab.Ray",
+    "rootNamespace": "",
+    "references": [
+        "Unity.InputSystem",
+        "VirtualLab.Azm"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
