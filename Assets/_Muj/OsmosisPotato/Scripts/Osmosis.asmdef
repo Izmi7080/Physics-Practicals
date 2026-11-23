@@ -1,0 +1,7 @@
+{
+    "name": "Osmosis",
+    "rootNamespace": "Osmosis",
+    "references": ["Unity.TextMeshPro", "UnityEngine.UI", "Unity.InputSystem", "DOTween.Modules",
+        "VirtualLab.Azm"],
+    "autoReferenced": true
+}

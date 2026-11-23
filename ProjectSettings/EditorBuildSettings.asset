@@ -20,6 +20,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Azm/Scenes/ScrewGauge_Azm.unity
     guid: 6f1f25104584c0c409b7dafc5b6c27f3
+  - enabled: 1
+    path: Assets/_Muj/OsmosisPotato/Scenes/Osmosis_Guidance.unity
+    guid: 44387d3ae90414ddc9a01641f432e3bd
+  - enabled: 1
+    path: Assets/_Muj/OsmosisPotato/Scenes/Osmosis_Lab.unity
+    guid: db3098e3306e04ca29dedf65eecd581f
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

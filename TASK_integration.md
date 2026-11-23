@@ -152,6 +152,43 @@ Pick the cleanest project from the inventory.
 5. Play test in Editor at 16:9 / 20:9 / 4:3, then an APK on a phone; record frame rate and APK size.
 6. Merge to `main`. Write down every fix needed → becomes the checklist for the others.
 
+**Stage 3 done (2026-11-24): Mujtaba — Osmosis in potato** (branch `integrate/mujtaba-osmosis`)
+- Imported `Assets/OsmosisPotato` -> `Assets/_Muj/OsmosisPotato` with .meta files (GUIDs kept), using
+  `F:/Integration/reports/import_plan.py` (+ `deps.py`): 134 files / 12.2 MB. His 141 MB `Reference`
+  folder was copied selectively (only the 53 files his scenes use). 11 files already in the host
+  (URP settings, TextMesh Pro) were skipped — his scenes use the host copies.
+- His code compiled unchanged (own asmdefs `Osmosis`, `Osmosis.Editor`, two test assemblies;
+  `DOTween.Modules` referenced by name, so it binds to the host's).
+- Integration changes (all marked `INTEGRATION (Tajarbagah)` in his folder):
+  `Scripts/Integration/TajarbagahLink.cs` (exit: shut down his persistent Sfx + SceneLoader, then
+  AppManager_Azm.GoToMainMenu), `PracticalEntry.cs` (creates his sound bank in Guidance/Lab, starts
+  the music in Guidance as his PLAY did), `BackButton.cs` (Android back opens his own exit popup);
+  `Sfx.Shutdown/Exists`, `SceneLoader.Shutdown`; `MenuActions.Quit/ToMenu` -> app menu (no
+  Application.Quit); `Osmosis.asmdef` references `VirtualLab.Azm`; AppBootstrap in Guidance and Lab;
+  canvas scalers -> Expand (4:3 cut off his BACK/NEXT arrows).
+- Practical starts at `Osmosis_Guidance` (his title screen `Osmosis_Menu` is replaced by the app menu
+  and is not in the build). Card: `_Muj/OsmosisPotato/Data/PracticalInfo_Osmosis.asset` in the Biology
+  slot 1. Build: `Osmosis_Guidance`, `Osmosis_Lab`.
+- Tested: menu -> Biology card -> Guidance (bank created, music on) -> Lab (music stops as in his
+  original) -> back button/popup -> YES -> app menu (bank + loader gone, no stray audio); second
+  entry works; 7 build scenes 0 missing scripts / broken refs; no console errors.
+- Not changed (team to decide): his classes keep his naming (namespace `Osmosis`, no `_Muj` suffix);
+  his `SceneLoader` sets `Application.targetFrameRate = 60` and enables EnhancedTouch at app start
+  (harmless app-wide, noted); tests not run yet.
+
+**Pilot checklist for the next imports**
+1. `deps.py` on the member project (roots = their scenes/scripts/prefabs) -> `import_plan.py` dry run;
+   use `--partial` for big asset dumps; check the "skip" list (host copies win).
+2. Copy with `--copy` on a new branch; refresh Unity; check compile + assembly names.
+3. Scan their scenes/prefabs for missing scripts / broken refs.
+4. Find every `DontDestroyOnLoad`, `Application.Quit`, own menu/launcher scene, scene-name loads and
+   global settings (frame rate, input) -> route exits to `AppManager_Azm.GoToMainMenu` and clean up
+   their persistent objects on exit.
+5. Pick the entry scene (skip their title/launcher), add `AppBootstrap`, Android back button.
+6. Canvas scalers -> Expand; capture 16:9 / 20:9 / 4:3.
+7. PracticalInfo asset in their folder + catalog slot + Build Settings.
+8. Play test menu -> practical -> exit -> menu twice; re-scan all build scenes; merge.
+
 ## STOP GATE 3 — the pilot checklist is reviewed
 
 ---
