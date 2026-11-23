@@ -73,3 +73,21 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+
+# ----- Physics Practicals: project-specific -----
+# Personal documents, reference PDFs, screenshots (kept locally only)
+/Docs/
+
+# Unity Version Control (Plastic) workspace files - this repo uses git
+/.plastic/
+/ignore.conf
+
+# Build by-products (APKs are already ignored above)
+*_BackUpThisFolder_ButDontShipItWithYourGame/
+*_BurstDebugInformation_DoNotShip/
+
+# Old zipped copy of ProjectSettings (226 MB, over GitHub's 100 MB file limit)
+/ProjectSettings.zip
+
+# Leftover folder from the first clone of this repo
+/Physics Practicals/

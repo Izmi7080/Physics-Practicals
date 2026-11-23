@@ -1,0 +1,106 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a407502170d34004ba29f843c41175d1, type: 3}
+  m_Name: PendulumConfig_Azm
+  m_EditorClassIdentifier: Assembly-CSharp::VirtualLab.Azm.Pendulum.PendulumConfig_Azm
+  trueGravity: 9.8
+  oscillationCount: 20
+  minimumLengths: 5
+  bobDiameterCm: 2
+  useCaliperStep: 1
+  minLengthCm: 30
+  maxLengthCm: 100
+  lengthResolutionCm: 0.1
+  startingLengthCm: 60
+  minLengthSeparationCm: 2
+  maxReleaseAngleDeg: 15
+  minReleaseAngleDeg: 3
+  maxDragAngleDeg: 35
+  pushSpeedThresholdDegPerSec: 45
+  offMeanAngleFraction: 0.65
+  halfSwingIntervalRatio: 0.7
+  halfSwingMinIntervals: 3
+  missedCountIntervalRatio: 1.6
+  originInterceptFraction: 0.1
+  steps:
+  - id: 0
+    instruction: Bob diameter d = 2.00 cm (given)
+    why: "With d given, r = d/2 = 1.00 cm. The bob swings about its centre, so the
+      effective length is L = \u2113 + r."
+    view: 0
+    controls: 1
+    drawer: 0
+    guideProcedureIndex: 1
+  - id: 8
+    instruction: Measure the bob's diameter d
+    why: "The thread length \u2113 is measured to the TOP of the bob, but the bob
+      swings about its centre. You need the radius r = d/2 to get the real (effective)
+      length L = \u2113 + r."
+    view: 3
+    controls: 64
+    drawer: 3
+    guideProcedureIndex: 1
+  - id: 1
+    instruction: "Drag the bob to set the length \u2113"
+    why: "You time the pendulum at several different lengths, then plot T\xB2 against
+      L. Each length gives one point on the graph."
+    view: 1
+    controls: 2
+    drawer: 3
+    guideProcedureIndex: 2
+  - id: 2
+    instruction: "Pull the bob aside (\u2264 15\xB0), let go"
+    why: "Only small swings (15\xB0 or less) are simple harmonic motion, where T
+      = 2\u03C0\u221A(L/g) holds. Let go from rest - a push adds energy."
+    view: 1
+    controls: 0
+    drawer: 0
+    guideProcedureIndex: 4
+  - id: 3
+    instruction: Tap at the centre, then each full swing
+    why: 'Timing 20 oscillations, not one, spreads your reaction-time error over
+      20 swings. Start and stop at the centre: the bob is fastest there, so the moment
+      is easiest to judge.'
+    view: 2
+    controls: 4
+    drawer: 0
+    guideProcedureIndex: 5
+  - id: 4
+    instruction: Time 20 oscillations again
+    why: Two runs averaged reduce the effect of one badly timed run.
+    view: 2
+    controls: 4
+    drawer: 0
+    guideProcedureIndex: 8
+  - id: 5
+    instruction: Row recorded - add another length
+    why: The syllabus asks for at least 5 different lengths, so the graph has enough
+      points to show a straight line.
+    view: 1
+    controls: 24
+    drawer: 1
+    guideProcedureIndex: 10
+  - id: 6
+    instruction: "Check your graph: T\xB2 against L"
+    why: "T\xB2 = (4\u03C0\xB2/g) L, so T\xB2 against L is a straight line through
+      the origin with slope 4\u03C0\xB2/g. That gives g = 4\u03C0\xB2 / slope."
+    view: 0
+    controls: 32
+    drawer: 2
+    guideProcedureIndex: 13
+  - id: 7
+    instruction: Your result
+    why: 
+    view: 0
+    controls: 0
+    drawer: 3
+    guideProcedureIndex: 14

@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 692e61375c227c4488b17aa4e2df76cc, type: 3}
+  m_Name: CylinderConfig_Azm
+  m_EditorClassIdentifier: Assembly-CSharp::VirtualLab.Azm.Cylinder.CylinderConfig_Azm
+  trueDiameterCm: 2.18
+  trueLengthCm: 4.36
+  variationLeastCounts: 1
+  readingsPerQuantity: 3
+  zeroErrorSetting: 2
+  fixedZeroErrorLeastCounts: 3
+  randomZeroErrorMaxLeastCounts: 4
+  leastCountChoicesMm:
+  - 1
+  - 0.9
+  - 0.1
+  - 0.01
+  steps:
+  - id: 0
+    instruction: Find the least count
+    why: "The least count is the smallest length the calipers can measure. You need
+      it to turn the vernier division n into a length: X = n \xD7 LC."
+    view: 1
+    controls: 3
+    guideProcedureIndex: 0
+  - id: 1
+    instruction: Close the jaws and read the zero error
+    why: If the two zeros do not line up when the jaws are closed, every reading
+      is off by the same amount. Measuring this zero error lets you correct all your
+      readings.
+    view: 1
+    controls: 5
+    guideProcedureIndex: 1
+  - id: 2
+    instruction: Measure the diameter D ({0} of {1})
+    why: A real cylinder is never perfectly round, so you measure it at three places
+      and use the mean. Both jaws must touch the cylinder.
+    view: 1
+    controls: 5
+    guideProcedureIndex: 2
+  - id: 3
+    instruction: Measure the length L ({0} of {1})
+    why: "The volume needs the length as well as the radius: V = \u03C0r\xB2L. Three
+      readings again, for a reliable mean."
+    view: 1
+    controls: 5
+    guideProcedureIndex: 3
+  - id: 4
+    instruction: Work out the area and volume
+    why: "Use the means of your CORRECTED readings: r = D/2, then A = \u03C0r\xB2
+      (Exp 1.1) and V = \u03C0r\xB2L (Exp 1.2)."
+    view: 0
+    controls: 8
+    guideProcedureIndex: 4
+  - id: 5
+    instruction: Your result
+    why: 
+    view: 0
+    controls: 0
+    guideProcedureIndex: 5

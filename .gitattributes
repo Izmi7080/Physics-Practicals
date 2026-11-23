@@ -1,2 +1,36 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+# Unity YAML: always LF, merged with Unity's Smart Merge (UnityYAMLMerge) when configured
+*.unity     text eol=lf merge=unityyamlmerge
+*.prefab    text eol=lf merge=unityyamlmerge
+*.asset     text eol=lf merge=unityyamlmerge
+*.mat       text eol=lf merge=unityyamlmerge
+*.anim      text eol=lf merge=unityyamlmerge
+*.controller text eol=lf merge=unityyamlmerge
+*.meta      text eol=lf
+*.cs        text diff=csharp
+
+# Binary assets: never touched by line-ending conversion
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.tga  binary
+*.psd  binary
+*.fbx  binary
+*.FBX  binary
+*.obj  binary
+*.blend binary
+*.wav  binary
+*.mp3  binary
+*.ogg  binary
+*.ttf  binary
+*.otf  binary
+*.pdf  binary
+*.zip  binary
+*.dll  binary
+*.so   binary
+*.aar  binary
+*.jar  binary
+*.exr  binary
+*.hdr  binary

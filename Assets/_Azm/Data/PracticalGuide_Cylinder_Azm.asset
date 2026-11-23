@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8cb648fdf2cd024d97f20a78acfcd4c, type: 3}
+  m_Name: PracticalGuide_Cylinder_Azm
+  m_EditorClassIdentifier: Assembly-CSharp::VirtualLab.Azm.Core.PracticalGuide_Azm
+  title: 'Vernier Calipers: Solid Cylinder (Exp 1.1 and 1.2)'
+  aim: 'Exp 1.1: find the area of cross-section of a solid cylinder.
+
+    Exp 1.2:
+    find its volume.
+
+    Both by measuring its diameter and length with vernier
+    calipers.'
+  description: Vernier calipers measure lengths to a hundredth of a centimetre. The
+    sliding vernier scale next to the main scale lets you read the fraction of a
+    millimetre between two main-scale marks.
+  apparatus:
+  - Vernier calipers
+  - Solid metal cylinder
+  whatYouMeasure: "The least count and the zero error of the calipers, then the diameter
+    D of the cylinder three times and its length L three times. From their means:
+    r = D/2, the area of cross-section A = \u03C0r\xB2 and the volume V = \u03C0r\xB2L."
+  procedure:
+  - "Find the least count: LC = smallest main-scale division \xF7 number of vernier
+    divisions."
+  - Close the jaws gently and find the zero error and the zero correction.
+  - "Grip the cylinder across between the outside jaws. Read the main scale M and
+    the vernier division n that coincides: Y = M + n \xD7 LC, then apply the zero
+    correction. Repeat at three places."
+  - Grip the cylinder lengthwise and measure its length L the same way, three times.
+  - "Find the mean D and the mean L, then r = D/2, A = \u03C0r\xB2 and V = \u03C0r\xB2L."
+  - Record your results.
+  formulas:
+  - "Least count LC = smallest main-scale division \xF7 number of vernier divisions"
+  - "Fraction X = n \xD7 LC;  observed value Y = M + X"
+  - "Zero correction ZC = \u2212(zero error);  corrected value = Y + ZC"
+  - "Radius r = D / 2;  area of cross-section A = \u03C0r\xB2"
+  - "Volume V = \u03C0r\xB2L"
+  precautions:
+  - text: Close the jaws gently.
+    why: Pressing hard can bend the jaws and change every reading.
+  - text: Apply the zero correction.
+    why: If the vernier 0 is not on the main-scale 0 with the jaws closed, every
+      reading is off by the same amount.
+  - text: Both jaws should touch the cylinder.
+    why: A gap makes the reading too large; squeezing tilts the jaws.
+  - text: Take readings at different places.
+    why: A real cylinder is not perfectly even, so the mean of several readings is
+      more reliable.
+  observationTable: "For L\u2081\u2013L\u2083 and D\u2081\u2013D\u2083: main-scale
+    reading M, vernier division n, fraction X = n \xD7 LC, observed value Y = M +
+    X, corrected value Y + ZC (all in cm). The least count, zero error and zero correction
+    are written above the table."

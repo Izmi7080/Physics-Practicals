@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 458f444f426145f459bdf6a02c86c7d8, type: 3}
+  m_Name: AssetCredits_Azm
+  m_EditorClassIdentifier: Assembly-CSharp::VirtualLab.Azm.Core.AssetCredits_Azm
+  entries:
+  - assetName: Inter (UI font)
+    author: The Inter Project Authors (Rasmus Andersson)
+    license: SIL OFL 1.1
+    source: github.com/rsms/inter (v4.0)
+    note: 'Licence text: Assets/_Azm/Art/Fonts/Inter-LICENSE.txt'
+  - assetName: Liberation Sans (default TextMeshPro font)
+    author: Red Hat, Inc.
+    license: SIL OFL 1.1
+    source: Shipped with Unity's TextMeshPro essentials
+    note: Replace with the project's rounded UI font (Poppins or Inter, SIL OFL)
+      once it is added.
+  - assetName: Lab room props (tap, water shelf)
+    author: 
+    license: credit to be confirmed
+    source: Assets/Flame Test (supplied with the Flame Test practical)
+    note: Author and licence were not found in the project - confirm before release.
+  - assetName: Vernier caliper model
+    author: Made for this project in Blender
+    license: Project-owned (no third-party licence)
+    source: ArtSource/build_vernier_azm.py
+    note: Procedural model and graduation texture; see VernierCaliper_Azm_NOTES.md.

@@ -1,0 +1,80 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8cb648fdf2cd024d97f20a78acfcd4c, type: 3}
+  m_Name: PracticalGuide_Pendulum_Azm
+  m_EditorClassIdentifier: Assembly-CSharp::VirtualLab.Azm.Core.PracticalGuide_Azm
+  title: 'Simple Pendulum: find g'
+  aim: "Find the acceleration due to gravity g by timing a simple pendulum at different
+    lengths and plotting T\xB2 against L."
+  description: A simple pendulum is a small bob hanging from a fixed point on a light,
+    inextensible thread. Pulled aside slightly and released, it swings back and forth
+    under gravity. You measure how long one complete swing (the time period T) takes,
+    and how that changes with the length.
+  hypothesis: "The time period depends on the length: T\xB2 is directly proportional
+    to L, and does not depend on the bob's mass or the size of a small swing. So
+    T\xB2 against L is a straight line through the origin."
+  apparatus:
+  - Retort stand with clamp and split cork
+  - "Light, inextensible thread (about 100\u2013150 cm)"
+  - Metal spherical bob
+  - Metre scale
+  - Vernier calipers
+  - Stopwatch
+  whatYouMeasure: "The bob's diameter d (vernier calipers) \u2192 r = d/2. For at
+    least 5 lengths \u2113: the time t for 20 oscillations, twice, and the mean.
+    Then L = \u2113 + r, T = t/20 and T\xB2. From the slope of T\xB2 against L: g
+    = 4\u03C0\xB2 / slope."
+  procedure:
+  - Clamp the thread at the pivot; let the bob hang freely.
+  - Measure the bob's diameter with vernier calipers; halve it to get r.
+  - "Set a length \u2113, from the pivot to the top of the bob."
+  - "Effective length: L = \u2113 + r."
+  - "Pull the bob aside by a small angle (\u2264 15\xB0) and release from rest -
+    no push."
+  - Start the stopwatch as the bob passes the mean (centre) position.
+  - Count 20 full oscillations; stop the stopwatch as it passes the centre again.
+  - Record this time as t.
+  - Time it once more at the same length; average the two times.
+  - T = t / 20.
+  - Change the length and repeat, for at least 5 different lengths.
+  - "Tabulate \u2113, r, L, t, T and T\xB2 for every length."
+  - "Plot T\xB2 (y-axis) against L (x-axis)."
+  - "A straight line through the origin confirms that T\xB2 is proportional to L."
+  - "g = 4\u03C0\xB2 / slope."
+  formulas:
+  - 'Time period: T = t / n  (n = 20)'
+  - "Effective length: L = \u2113 + r"
+  - "T\xB2 = (4\u03C0\xB2/g) L, so T\xB2 is proportional to L"
+  - "g = 4\u03C0\xB2 / slope  (slope = T\xB2 / L)"
+  precautions:
+  - text: "Keep the angle small (\u2264 15\xB0)."
+    why: Beyond that the pendulum no longer behaves like simple harmonic motion.
+  - text: "Use the effective length L = \u2113 + r."
+    why: The bob swings about its centre; the radius matters, especially for short
+      pendulums.
+  - text: Time 20 oscillations, never one.
+    why: It spreads your reaction-time error over many swings.
+  - text: Start and stop at the mean position.
+    why: The bob moves fastest there, so the moment is easiest to judge.
+  - text: Release from rest - no push.
+    why: A push adds energy and invalidates the simple-pendulum assumption.
+  - text: Avoid draughts.
+    why: Air currents make the bob swing in an ellipse instead of a flat plane.
+  - text: Use a light, inextensible thread.
+    why: A stretchy or heavy thread changes the effective length during the swing.
+  - text: Keep the same person timing.
+    why: Any reaction-time bias stays the same for every trial.
+  - text: Read the scale at eye level.
+    why: Avoids parallax error in the length.
+  observationTable: "Obs. No. | \u2113 (cm) | r (cm) | L = \u2113 + r (cm) | n |
+    t\u2081 (s) | t\u2082 (s) | mean t (s) | T = t/n (s) | T\xB2 (s\xB2) - with n
+    = 20 for every row and at least 5 rows."

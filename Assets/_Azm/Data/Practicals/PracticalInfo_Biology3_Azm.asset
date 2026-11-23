@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bb82ce24478710469a11abd1770dc96, type: 3}
+  m_Name: PracticalInfo_Biology3_Azm
+  m_EditorClassIdentifier: Assembly-CSharp::VirtualLab.Azm.Core.PracticalInfo_Azm
+  id: biology.placeholder_3
+  displayName: Biology Practical 3
+  subject: 2
+  shortDescription: Coming soon.
+  thumbnail: {fileID: 0}
+  estimatedMinutes: 0
+  apparatus: []
+  sceneName: 
+  isLocked: 1
+  learnModeAvailable: 1
+  performModeAvailable: 0

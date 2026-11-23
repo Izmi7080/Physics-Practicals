@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8cb648fdf2cd024d97f20a78acfcd4c, type: 3}
+  m_Name: PracticalGuide_ScrewGauge_Azm
+  m_EditorClassIdentifier: Assembly-CSharp::VirtualLab.Azm.Core.PracticalGuide_Azm
+  title: 'Screw Gauge: Thickness of a Metal Strip (Exp 1.3)'
+  aim: Measure the thickness of a metal strip with a screw gauge.
+  description: 'A screw gauge measures lengths as small as a hundredth of a millimetre.
+    It has two scales: the main scale on the sleeve and the circular scale on the
+    thimble. Turning the thimble one full turn moves the spindle by one pitch.'
+  apparatus:
+  - Screw gauge
+  - Flat metal strip (or a kink-free wire)
+  whatYouMeasure: The pitch and least count of the screw gauge, its zero error, then
+    the thickness of the strip three times at different places. The result is the
+    mean of the three corrected readings.
+  procedure:
+  - "Find the least count: LC = pitch \xF7 number of divisions on the circular scale."
+  - Close the anvil and spindle by turning the ratchet until it clicks.
+  - Check the zero error and work out the zero correction.
+  - Hold the metal strip between the anvil and the spindle.
+  - Tighten gently with the ratchet until it clicks.
+  - 'Note the main-scale reading M: the mark just under or before the edge of the
+    thimble.'
+  - Note the division n of the circular scale that lies on the datum line.
+  - "Fraction X = n \xD7 LC; observed thickness Y = M + X."
+  - "Apply the zero correction: t = Y \xB1 ZC."
+  - Take two more readings at different places and find the mean thickness.
+  formulas:
+  - Pitch = distance moved on the main scale for one full turn = 0.5 mm
+  - "Least count LC = pitch \xF7 number of circular divisions = 0.5 mm \xF7 50 =
+    0.01 mm"
+  - "Zero error: circular 0 below the datum line = +n \xD7 LC; above it = \u2212(50
+    \u2212 n) \xD7 LC"
+  - "Zero correction ZC = \u2212(zero error)"
+  - "X = n \xD7 LC;  Y = M + X;  t = Y + ZC;  mean t = (t\u2081 + t\u2082 + t\u2083)
+    / 3"
+  precautions:
+  - text: Add or subtract the zero correction as required.
+    why: A zero error shifts every reading by the same amount.
+  - text: Take readings at different places.
+    why: A strip or wire is not exactly the same thickness everywhere; the mean is
+      more reliable.
+  - text: Do not press the jaws very hard.
+    why: Squeezing bends the strip and the frame, so the reading comes out too small.
+  - text: Do not turn the thimble back and forth unnecessarily.
+    why: It wears the screw, which spoils the pitch.
+  - text: Turn the screw gently using the ratchet.
+    why: 'The ratchet slips once the spindle touches, so every reading uses the same
+      light pressure. (Think: this is what the ratchet is for.)'
+  - text: Use a flat strip (or a kink-free wire).
+    why: 'A bend or kink holds the spindle away from the metal, so the reading is
+      too large. (Think: why it must be flat.)'
+  observationTable: "For readings 1\u20133: main-scale reading M (mm), circular division
+    n on the datum line, fraction X = n \xD7 LC (mm), observed thickness Y = M +
+    X (mm), corrected thickness t = Y \xB1 ZC (mm). LC, zero error and zero correction
+    are written above the table; mean t = (t\u2081 + t\u2082 + t\u2083)/3."

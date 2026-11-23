@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a97c5877004178d418c6a47500ddb575, type: 3}
+  m_Name: ScrewGaugePracticalConfig_Azm
+  m_EditorClassIdentifier: Assembly-CSharp::VirtualLab.Azm.ScrewGaugePractical.ScrewGaugePracticalConfig_Azm
+  objectKind: 0
+  trueThicknessMm: 0.73
+  variationLeastCounts: 1
+  readings: 3
+  zeroErrorSetting: 2
+  fixedZeroErrorLeastCounts: 2
+  randomZeroErrorMaxLeastCounts: 5
+  leastCountChoicesMm:
+  - 0.5
+  - 0.05
+  - 0.01
+  - 0.1
+  pitchTurnSeconds: 1.6
+  steps:
+  - id: 0
+    instruction: Find the pitch and least count
+    why: "Pitch = how far the spindle moves in one full turn of the thimble. Least
+      count = pitch \xF7 number of circular divisions: the smallest thickness the
+      gauge can measure."
+    view: 1
+    controls: 3
+    guideProcedureIndex: 0
+  - id: 1
+    instruction: Close with the ratchet, read the zero error
+    why: The ratchet slips at the same gentle pressure every time. If the circular
+      0 is not on the datum line when the gauge is closed, every reading needs the
+      same correction.
+    view: 1
+    controls: 13
+    guideProcedureIndex: 1
+  - id: 2
+    instruction: Measure the thickness t ({0} of {1})
+    why: A strip is not perfectly even, so you measure it at three different places
+      and use the mean. Always close with the ratchet.
+    view: 1
+    controls: 13
+    guideProcedureIndex: 3
+  - id: 3
+    instruction: Find the mean corrected thickness
+    why: Add the zero correction to each reading (t = Y + ZC), then take the mean
+      of the three.
+    view: 0
+    controls: 16
+    guideProcedureIndex: 8
+  - id: 4
+    instruction: Your result
+    why: 
+    view: 0
+    controls: 0
+    guideProcedureIndex: 9
