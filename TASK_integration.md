@@ -219,6 +219,32 @@ Same steps as Stage 3, one branch and one merge per practical, ideally with its 
   safe-area fix; 9 build scenes 0 missing / broken; 2 broken refs she documented (old flame material
   texture slot, calculator prefab font) are not used at runtime.
 
+**Saleha scope (Azzam, 2026-11-24):** only Ohm's law and Melting/boiling points are hers in this
+integration; Physics 8.1 (specific heat) is NOT part of it. Its code stays (Ohm's law uses its
+walking controls `LabWalkRig`/`LabWalkPad` and `Resources/Physics81Audio`); its scene and 11 assets
+used only by it (`F:/Integration/reports/sal_unused.txt`) are to be removed — pending Azzam's OK
+(the automatic removal was blocked by the safety check).
+
+**Stage 4b done (2026-11-24): Bareera** (branch `integrate/bareera`)
+- Her project is a copy of Azzam's old project plus her work: only HER 18 scripts were imported (35
+  copies of the old project's scripts left out; her scripts do not depend on them), her 2 scenes and
+  the assets they use (31 files, 5.2 MB) into `Assets/_Bar`; 33 files resolve to `_Shared`/host
+  copies. Her `PlanarMirror.shader` (loaded by name from `Scripts/Resources`) added after the play
+  test showed it missing.
+- New asmdef `VirtualLab.Bar` (her code had no namespaces) incl. URP references.
+- Input: her CuSO4 and Reflection code used the old `UnityEngine.Input` (throws under the Input System
+  setting): `Scripts/Integration/BarInput.cs` gives the same calls on the Input System (mouse + touch,
+  first finger = left button); 13 call sites switched.
+- Exits (marked `INTEGRATION (Tajarbagah)`): `Scripts/Integration/TajarbagahExit.cs` (app menu +
+  Android back); `SceneNavigator` back/quit, `CuSO4PracticalSteps.EndPractical` and
+  `ReflectionPractical.EndPractical` -> app menu (her menus StartScene / SubjectSelect /
+  PracticalSelect are not imported); AppBootstrap in both scenes.
+- Menu: Chemistry "Test for water (anhydrous CuSO4)" (slot chemistry 2), Physics "Laws of reflection"
+  (slot physics 5); both scenes in the build.
+- Tested: card -> intro (16:9/20:9/4:3 fit) -> CuSO4 bench renders, input adapter runs without
+  errors -> End -> app menu (time scale restored); Reflection real mirror surface created; 11 build
+  scenes 0 missing / broken; no console errors.
+
 ## STOP GATE 4 (after each practical)
 
 ---

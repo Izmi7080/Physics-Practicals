@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bb82ce24478710469a11abd1770dc96, type: 3}
+  m_Name: PracticalInfo_Reflection
+  m_EditorClassIdentifier: VirtualLab.Azm::VirtualLab.Azm.Core.PracticalInfo_Azm
+  id: physics.laws_of_reflection
+  displayName: Laws of reflection
+  subject: 0
+  shortDescription: Verify the laws of reflection of light using a plane mirror and
+    pins.
+  thumbnail: {fileID: 0}
+  estimatedMinutes: 20
+  apparatus:
+  - Drawing board
+  - White sheet of paper
+  - Drawing pins
+  - Plane mirror strip with stand
+  - Four common pins
+  - Protractor
+  - Ruler
+  - Sharp pencil
+  sceneName: PhysicsReflectionScene
+  isLocked: 0
+  learnModeAvailable: 1
+  performModeAvailable: 0
