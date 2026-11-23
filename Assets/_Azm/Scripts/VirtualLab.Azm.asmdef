@@ -1,0 +1,21 @@
+{
+    "name": "VirtualLab.Azm",
+    "rootNamespace": "VirtualLab.Azm",
+    "references": [
+        "UnityEngine.UI",
+        "Unity.TextMeshPro",
+        "Unity.InputSystem",
+        "DOTween.Modules",
+        "CandyCoded.HapticFeedback",
+        "CandyCoded.HapticFeedback.Android"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

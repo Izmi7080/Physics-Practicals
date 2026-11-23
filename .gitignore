@@ -91,3 +91,6 @@ crashlytics-build.properties
 
 # Leftover folder from the first clone of this repo
 /Physics Practicals/
+
+# Files the Unity build leaves in Resources (performance-test run info)
+/Assets/Resources/PerformanceTestRun*

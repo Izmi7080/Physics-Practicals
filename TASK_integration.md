@@ -115,6 +115,29 @@ Decisions the team has to take (Claude proposes, the team agrees):
    - recommended (not required at first): the shared shell (HUD base, theme) for a consistent look.
 5. Test: host builds an APK and runs on a phone before anyone else's work goes in.
 
+**Stage 2 progress (2026-11-24):**
+- Branch `integration` created (main = backup 60fff54).
+- Frog fix produced in `F:/Integration/processed/rayyan` (models 391k -> 113k tris, textures
+  1.5 GB -> 40 MB, same GUIDs, names kept Unity-style) — imported in Stage 3.
+- Dependency trace (`F:/Integration/reports/deps.py`): the app needs only the lab environment pack +
+  lab-room materials from `Assets/Flame Test`, `InputSystem_Actions`, `Assets/Settings`,
+  `Assets/Resources/DOTweenSettings`, Plugins, TextMesh Pro. Legacy (old pendulum `Assets/Scripts`,
+  `Assets/Scenes`, `Assets/Prefabs`, `Assets/Models`, Screenshots, TutorialInfo, Readme, the rest of
+  `Flame Test`) is unused.
+- `INTEGRATION_GUIDE.md` written (draft).
+- Done in Unity (2026-11-24):
+  - lab environment pack -> `Assets/_Shared/ThirdParty/3D Laboratory Environment with Appratus`,
+    lab-room prefab + materials -> `Assets/_Shared/LabRoom`, AngleArcLine.mat -> `_Azm/Art/Materials`
+    (all GUIDs kept);
+  - legacy content sent to the Recycle Bin (Flame Test rest, Models, Prefabs, Readme, Scenes,
+    Screenshots, Scripts, TutorialInfo); `Lab.unity` removed from Build Settings;
+  - Player settings: Tajarbagah / Tajarbagah / `com.tajarbagah.app`, landscape left+right only;
+  - asmdefs: `VirtualLab.Azm`, `VirtualLab.Azm.Editor`, `DOTween.Modules`;
+  - `Assets/_Shared/Prefabs/AppBootstrap.prefab` (SceneBootstrap with catalog + theme);
+  - checks: 5 scenes, 0 missing scripts / broken refs; 117 prefabs/materials/SOs clean except 4
+    third-party water prefabs (material missing inside `liquids.fbx` — pre-existing in the pack);
+    play test Splash -> Menu -> Pendulum -> Cylinder -> Screw gauge -> Menu, no errors.
+
 ## STOP GATE 2
 
 ---
