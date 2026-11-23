@@ -1,0 +1,98 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93b3ff9fe63449c1aae0db5d5f097f4e, type: 3}
+  m_Name: Acetone
+  m_EditorClassIdentifier: 
+  experimentId: acetone
+  curriculumNumber: "5.3"
+  chemicalName: Acetone
+  workflow: 1
+  playable: 1
+  requiredTrials: 2
+  procedureRevision: boiling-book-two-trial-v1
+  title: Determine the Boiling Point of Acetone
+  aim: Determine the boiling point using the assigned capillary procedure.
+  apparatus: Beaker, thermometer, heat source, stirrer, fusion tube, inverted capillary, dropper and clamp stand.
+  sourceNotes: "Assigned list: National Curriculum Chemistry IX-X 2006. Punjab notebook method: two actual trials; 250 mL beaker and about 100 mL bath. Melting uses 10 mm packed sample and thread. Boiling follows the book continuous-bubble endpoint, using electric heating for flammable solvents. The assigned benzene entry differs from the Punjab toluene page."
+  thermal:
+    ambientTemperature: 25
+    onsetTemperature: 56.1
+    completionTemperature: 56.1
+    referenceMinimum: 55
+    referenceMaximum: 57
+    slowHeatingTemperature: 51.1
+    maximumBathTemperature: 95
+    clockScale: 8
+    maximumHeatingRate: 6
+    warmingRate: 4
+    gentleRate: 1
+    excessiveRate: 1.5
+    stirredResponseSeconds: 2
+    unstirredResponseSeconds: 6
+    thermometerResponseSeconds: 0.5
+    stirringAllowanceSeconds: 6
+    observationAllowanceSeconds: 3
+    readingTolerance: 0.5
+    coolingRate: 0.025
+    nominalSampleColumnMm: 3
+  sample:
+    minimumColumnMm: 2
+    maximumColumnMm: 3
+    capacityMm: 12
+    collectionIncrementMm: 1
+    packingIncrementMm: 1
+    grindingRevolutions: 4
+  steps:
+  - id: "setup"
+    title: "Place the beaker"
+    cameraAnchor: "Overview"
+    guidedHint: "Take the beaker from the tray and place it on the electric bath heater."
+  - id: "water"
+    title: "Fill the water bath"
+    cameraAnchor: "Overview"
+    guidedHint: "Move the beaker below the tap. Fill about 100 mL, stop the tap, then return it."
+  - id: "seal"
+    title: "Seal an empty capillary"
+    cameraAnchor: "Burner"
+    guidedHint: "Take the empty capillary to the separate blue sealing flame. Let it cool before using solvent."
+  - id: "sample"
+    title: "Load the liquid sample"
+    cameraAnchor: "Capillary"
+    guidedHint: "Use Add drops to fill about one third of the fusion tube."
+  - id: "invert"
+    title: "Insert the inverted capillary"
+    cameraAnchor: "Capillary"
+    guidedHint: "Drag the capillary into the fusion tube, closed end up and open end in the liquid."
+  - id: "attach"
+    title: "Attach the fusion tube"
+    cameraAnchor: "Attachment"
+    guidedHint: "Drag the fusion tube beside the thermometer bulb, then secure the thread."
+  - id: "immerse"
+    title: "Clamp and immerse"
+    cameraAnchor: "Immersion"
+    guidedHint: "Clamp the assembly. Immerse the sample and bulb, keeping the fusion-tube opening and thread above water."
+  - id: "ignite"
+    title: "Switch the heater on"
+    cameraAnchor: "Overview"
+    guidedHint: "Switch on the electric heater. This solvent is not heated with an exposed flame."
+  - id: "heat"
+    title: "Heat, stir and observe bubbles"
+    cameraAnchor: "Sample"
+    guidedHint: "Place the stirrer. Stir while heating gently. Mark the start of a continuous stream of bubbles."
+  - id: "shutdown"
+    title: "Switch off the heater"
+    cameraAnchor: "Overview"
+    guidedHint: "Switch the heater off before writing your observation."
+  - id: "notebook"
+    title: "Complete the workbook"
+    cameraAnchor: "Overview"
+    guidedHint: "Read the saved temperature, repeat a separate trial and calculate the mean."

@@ -1,0 +1,14 @@
+<linker>
+  <assembly fullname="VirtualLab.Sal"><!-- INTEGRATION (Tajarbagah): her code now compiles into its own assembly -->
+    <type fullname="WorkbookDraft" preserve="all" />
+    <type fullname="PracticalSave" preserve="all" />
+    <type fullname="PracticalNotebook" preserve="all" />
+    <type fullname="PracticalTrial" preserve="all" />
+    <type fullname="PreparationState" preserve="all" />
+    <type fullname="ThermalSnapshot" preserve="all" />
+    <type fullname="ThermalSimulation" preserve="all" />
+    <type fullname="MeltingSimulation" preserve="all" />
+    <type fullname="BoilingSimulation" preserve="all" />
+    <type fullname="MeltingObservation" preserve="all" />
+  </assembly>
+</linker>

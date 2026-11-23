@@ -26,6 +26,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Muj/OsmosisPotato/Scenes/Osmosis_Lab.unity
     guid: db3098e3306e04ca29dedf65eecd581f
+  - enabled: 1
+    path: Assets/_Sal/Scenes/Melting_Point_Naphthalene.unity
+    guid: 7e344ab7ed1cf35469f369a8c268d6cb
+  - enabled: 1
+    path: Assets/_Sal/Scenes/Physics_14_1_Ohms_Law.unity
+    guid: 2ff0d54e2e110474492fdff6b07e7b53
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

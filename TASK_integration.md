@@ -197,6 +197,28 @@ Pick the cleanest project from the inventory.
 Same steps as Stage 3, one branch and one merge per practical, ideally with its author present
 (they know their scenes). After each merge: whole-app smoke test (menu → every practical → back).
 
+**Stage 4a done (2026-11-24): Saleha** (branch `integrate/saleha`)
+- Imported with `import_member.py` into `Assets/_Sal/` (same structure, so Resources paths still
+  work): Scripts, Resources, the 3 practical scenes, link.xml, only the USED files of PracticalAssets
+  (210 files, 37.7 MB); 30 of her lab-environment files resolve to `_Shared`. Her Editor tools and
+  launcher scene were left out (her notes: builders can auto-install layouts); her docs are in
+  `_Sal/Documentation`.
+- New asmdef `VirtualLab.Sal` (her code was in Assembly-CSharp, many classes have no namespace);
+  `link.xml` updated to the new assembly name (otherwise IL2CPP would strip her save classes on
+  Android only).
+- Integration changes (marked `INTEGRATION (Tajarbagah)`): `PracticalLauncher.Available/ReturnToMenu`
+  -> AppManager_Azm.GoToMainMenu (her single return point); `OhmBench.ReturnToMenu` internal;
+  `Scripts/Integration/TajarbagahBackButton.cs` (Android back -> her own saving exit, Chemistry and
+  Ohm); `PracticalSafeArea` clamps an invalid safe area (the Editor reported one larger than the
+  screen and her UI stretched to 125 %); AppBootstrap in all 3 scenes.
+- Menu: Chemistry "Melting & boiling points" (slot chemistry 1), Physics "Ohm's law" (slot physics 4);
+  build: Melting_Point_Naphthalene, Physics_14_1_Ohms_Law. Physics 8.1 (unfinished, not in her
+  launcher) imported but NOT in the menu/build.
+- Tested: menu -> each card -> her intro screen; one camera / listener / EventSystem; "All practicals"
+  and the back-button path return to the app menu (time scale restored); 16:9/20:9/4:3 fit after the
+  safe-area fix; 9 build scenes 0 missing / broken; 2 broken refs she documented (old flame material
+  texture slot, calculator prefab font) are not used at runtime.
+
 ## STOP GATE 4 (after each practical)
 
 ---

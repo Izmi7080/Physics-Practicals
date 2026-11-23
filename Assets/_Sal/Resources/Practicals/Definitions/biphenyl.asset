@@ -1,0 +1,102 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93b3ff9fe63449c1aae0db5d5f097f4e, type: 3}
+  m_Name: Biphenyl
+  m_EditorClassIdentifier: 
+  experimentId: biphenyl
+  curriculumNumber: "5.2"
+  chemicalName: Biphenyl
+  workflow: 0
+  requiredTrials: 2
+  playable: 1
+  procedureRevision: melting-book-two-trial-v4
+  title: Determine the Melting Point of Biphenyl
+  aim: Measure the temperature interval from first liquid to completely melted sample.
+  apparatus: Beaker, thermometer, burner, tripod, gauze, stirrer, capillary, clamp stand, mortar and pestle.
+  sourceNotes: "Assigned list: National Curriculum Chemistry IX-X 2006. Punjab notebook method: two actual trials; 250 mL beaker and about 100 mL bath. Melting uses 10 mm packed sample and thread. Boiling follows the book continuous-bubble endpoint, using electric heating for flammable solvents. The assigned benzene entry differs from the Punjab toluene page."
+  thermal:
+    ambientTemperature: 25
+    onsetTemperature: 69
+    completionTemperature: 70
+    referenceMinimum: 68
+    referenceMaximum: 71
+    slowHeatingTemperature: 64
+    maximumBathTemperature: 95
+    clockScale: 8
+    maximumHeatingRate: 6
+    warmingRate: 4
+    gentleRate: 1
+    excessiveRate: 1.5
+    stirredResponseSeconds: 2
+    unstirredResponseSeconds: 6
+    thermometerResponseSeconds: 0.5
+    stirringAllowanceSeconds: 6
+    observationAllowanceSeconds: 3
+    readingTolerance: 0.5
+    coolingRate: 0.025
+    nominalSampleColumnMm: 10
+  sample:
+    minimumColumnMm: 10
+    maximumColumnMm: 10
+    capacityMm: 18
+    collectionIncrementMm: 2
+    packingIncrementMm: 2
+    grindingRevolutions: 4
+  steps:
+  - id: "setup"
+    title: "Assemble the water bath"
+    cameraAnchor: "Overview"
+    guidedHint: "Take tripod, gauze and beaker from the tray. Drag them onto the green destinations in that order."
+  - id: "water"
+    title: "Fill the beaker"
+    cameraAnchor: "Preparation"
+    guidedHint: "Move the beaker below the tap. Fill about 100 mL, stop the tap, then return the beaker to the gauze."
+  - id: "seal"
+    title: "Seal one capillary end"
+    cameraAnchor: "Burner"
+    guidedHint: "Take the capillary from the tray. Drag one end to the blue flame, then let it cool."
+  - id: "sample"
+    title: "Load biphenyl"
+    cameraAnchor: "Mortar"
+    guidedHint: "Take Sample from the tray, then drag it from the container into the mortar."
+  - id: "grind"
+    title: "Grind the sample"
+    cameraAnchor: "Mortar"
+    guidedHint: "Take out the pestle and place it in the mortar. Hold Grind to crush the sample."
+  - id: "pack"
+    title: "Fill and pack the capillary"
+    cameraAnchor: "Capillary"
+    guidedHint: "Collect a compact 10 mm sample column. Drag into powder again if needed, then tap the tube to settle it."
+  - id: "attach"
+    title: "Attach the capillary"
+    cameraAnchor: "Attachment"
+    guidedHint: "Drag the capillary beside the bulb, then select the thread."
+  - id: "immerse"
+    title: "Clamp and immerse"
+    cameraAnchor: "Immersion"
+    guidedHint: "Place the thermometer in the clamp. Slide vertically. Keep sample submerged, clear of glass, and band above water."
+  - id: "ignite"
+    title: "Light the burner"
+    cameraAnchor: "Burner"
+    guidedHint: "Tap Light burner. A blue flame appears."
+  - id: "heat"
+    title: "Heat, stir, and observe"
+    cameraAnchor: "Heating"
+    guidedHint: "Take out the stirrer, place it, then hold Stir. Use 4 °C/min to warm; near 75 °C reduce to 1 °C/min. Mark first and final melting."
+  - id: "shutdown"
+    title: "Switch off"
+    cameraAnchor: "Heating"
+    guidedHint: "Turn off the burner before completing the notebook."
+  - id: "notebook"
+    title: "Complete the notebook"
+    cameraAnchor: "Overview"
+    guidedHint: "Read the captured scales. Enter T1 and T2 and write your conclusion."
